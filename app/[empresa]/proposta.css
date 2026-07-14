@@ -1,0 +1,161 @@
+
+  :root{
+    --black:#0E0E0E;
+    --panel:#171717;
+    --panel-2:#1D1D1D;
+    --amber:#F5B113;
+    --amber-dim:rgba(245,177,19,0.16);
+    --amber-line:rgba(245,177,19,0.28);
+    --white:#FFFFFF;
+    --grey:#9A9A9A;
+    --grey-dim:#6B6B6B;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--black); color:var(--white); font-family:'Inter', sans-serif; -webkit-font-smoothing:antialiased; line-height:1.55;}
+  .wrap{max-width:1040px; margin:0 auto; padding:64px 32px 90px;}
+
+  .eyebrow{font-family:'Manrope', sans-serif; font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--amber); display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--amber); display:inline-block;}
+
+  header{display:flex; justify-content:space-between; align-items:flex-start; padding-bottom:40px; border-bottom:1px solid var(--amber-line); margin-bottom:56px; animation:fadeUp .7s ease both;}
+  .brand{font-family:'Manrope', sans-serif; font-weight:800; font-size:15px; letter-spacing:.06em;}
+  .brand span{color:var(--amber);}
+  .brand small{display:block; font-family:'Inter'; font-weight:400; font-size:11px; letter-spacing:.03em; color:var(--grey-dim); margin-top:4px;}
+  .meta-box{text-align:right; font-size:12px; color:var(--grey); line-height:1.7;}
+  .meta-box b{color:var(--white);}
+
+  .hero{margin-bottom:64px; animation:fadeUp .8s ease both .05s;}
+  .hero h1{font-family:'Manrope', sans-serif; font-weight:800; font-size:clamp(32px, 5.5vw, 50px); letter-spacing:-.02em; line-height:1.1; margin:18px 0 18px; max-width:760px;}
+  .hero h1 em{font-style:normal; color:var(--amber);}
+  .hero p{max-width:600px; color:var(--grey); font-size:15.5px;}
+
+  .section-head{margin-bottom:28px;}
+  .section-head h2{font-family:'Manrope'; font-weight:700; font-size:26px; margin-top:14px; letter-spacing:-.01em;}
+  .section-sub{max-width:640px; color:var(--grey); font-size:14.5px; margin-top:10px;}
+  section{margin-bottom:80px;}
+
+  .bracket{position:relative;}
+  .bracket::before, .bracket::after{content:""; position:absolute; width:12px; height:12px; border-color:var(--amber); border-style:solid; opacity:.9; pointer-events:none;}
+  .bracket::before{top:12px; left:12px; border-width:1.5px 0 0 1.5px;}
+  .bracket::after{bottom:12px; right:12px; border-width:0 1.5px 1.5px 0;}
+
+  /* ---------- pricing grid ---------- */
+  .plans-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:stretch;}
+  .plan-card{
+    --lift:0px;
+    background:var(--panel);
+    border:1px solid var(--amber-line);
+    padding:34px 28px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    transform:translateY(var(--lift));
+    transition:transform .35s cubic-bezier(.22,1,.36,1), border-color .35s ease, box-shadow .35s ease;
+  }
+  .plan-card:hover{
+    --hover-lift:calc(var(--lift) - 6px);
+    transform:translateY(var(--hover-lift));
+    border-color:var(--amber);
+    box-shadow:0 18px 40px -20px rgba(245,177,19,.35);
+  }
+  .plan-card.featured{
+    --lift:-8px;
+    background:linear-gradient(160deg, var(--panel-2) 0%, var(--panel) 100%);
+    border:1px solid var(--amber);
+  }
+  .plan-tag{
+    position:absolute; top:-1px; left:-1px; right:-1px;
+    background:var(--amber); color:var(--black);
+    font-family:'Manrope'; font-weight:700; font-size:10.5px;
+    letter-spacing:.08em; text-transform:uppercase;
+    text-align:center; padding:7px;
+  }
+  .plan-card.featured{padding-top:56px;}
+  .plan-num{font-family:'Manrope'; font-weight:800; font-size:12px; color:var(--grey-dim); letter-spacing:.06em; margin-bottom:10px;}
+  .plan-name{font-family:'Manrope'; font-weight:800; font-size:20px; margin-bottom:6px;}
+  .plan-desc{font-size:12.5px; color:var(--grey); margin-bottom:22px; min-height:34px;}
+  .plan-price{font-family:'Manrope'; font-weight:800; font-size:38px; color:var(--amber); line-height:1; margin-bottom:2px;}
+  .plan-price span{font-size:14px; font-weight:600; color:var(--grey);}
+  .plan-divider{height:1px; background:var(--amber-line); margin:22px 0;}
+  .plan-includes-label{font-family:'Manrope'; font-weight:700; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--grey-dim); margin-bottom:14px;}
+  .plan-card ul{list-style:none; flex-grow:1;}
+  .plan-card li{position:relative; padding-left:20px; margin-bottom:11px; font-size:13.5px; color:#E0E0E0;}
+  .plan-card li::before{content:"✓"; position:absolute; left:0; color:var(--amber); font-weight:700;}
+  .plan-inherit{font-size:12px; color:var(--grey-dim); font-style:italic; margin-bottom:14px;}
+
+  /* ---------- guidance ---------- */
+  .guide-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  .guide-card{background:var(--panel); border:1px solid var(--amber-line); padding:26px 26px 24px; transition:border-color .3s ease, transform .3s ease;}
+  .guide-card:hover{border-color:var(--amber); transform:translateY(-4px);}
+  .guide-head{display:flex; align-items:center; gap:10px; margin-bottom:6px;}
+  .guide-num{font-family:'Manrope'; font-weight:800; font-size:11px; color:var(--grey-dim); letter-spacing:.05em;}
+  .guide-card b{font-family:'Manrope'; display:block; color:var(--amber); font-size:14.5px;}
+  .guide-sub{font-size:10.5px; color:var(--grey-dim); text-transform:uppercase; letter-spacing:.07em; margin-bottom:16px;}
+  .guide-card ul{list-style:none;}
+  .guide-card li{position:relative; padding-left:20px; margin-bottom:11px; font-size:13px; color:#D6D6D6; line-height:1.45;}
+  .guide-card li:last-child{margin-bottom:0;}
+  .guide-card li::before{content:"→"; position:absolute; left:0; top:0; color:var(--amber); font-weight:700; font-size:12px;}
+
+  /* ---------- cta ---------- */
+  .cta-box{
+    border:1px solid var(--amber-line);
+    background:linear-gradient(135deg, rgba(245,177,19,.10), rgba(245,177,19,.03));
+    padding:40px; text-align:center;
+  }
+  .cta-box p.big{font-family:'Manrope'; font-weight:800; font-size:22px; margin-bottom:12px;}
+  .cta-box p.big span{color:var(--amber);}
+  .cta-box p.small{font-size:13.5px; color:var(--grey); max-width:520px; margin:0 auto 20px; line-height:1.7;}
+  .cta-box p.contact{font-size:13px; color:var(--amber); font-weight:600;}
+
+  footer{margin-top:70px; padding-top:26px; border-top:1px solid var(--amber-line); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-size:11px; color:var(--grey-dim); letter-spacing:.03em;}
+
+  /* ---------- whatsapp cta button ---------- */
+  .plan-wa{
+    margin-top:22px;
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    font-family:'Manrope'; font-weight:700; font-size:13px;
+    text-decoration:none;
+    padding:13px 18px;
+    border:1px solid var(--amber);
+    color:var(--amber);
+    transition:background .2s ease, color .2s ease, transform .2s ease;
+  }
+  .plan-wa:hover{background:var(--amber); color:var(--black); transform:translateY(-2px);}
+  .plan-wa:active{transform:translateY(0);}
+  .plan-card.featured .plan-wa{background:var(--amber); color:var(--black);}
+  .plan-card.featured .plan-wa:hover{background:transparent; color:var(--amber);}
+  .plan-wa svg{width:15px; height:15px; flex-shrink:0;}
+
+  @keyframes fadeUp{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}}
+
+  /* ---------- scroll reveal ---------- */
+  .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); transition-delay:var(--d,0s);}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+    .reveal{opacity:1 !important; transform:none !important;}
+  }
+
+  @media (max-width:820px){
+    .plans-grid{grid-template-columns:1fr; gap:22px;}
+    .plan-card.featured{--lift:0px;}
+    .plan-card:hover{transform:none; box-shadow:none;}
+    .guide-grid{grid-template-columns:1fr;}
+    header{flex-direction:column; gap:20px;}
+    .meta-box{text-align:left;}
+    section{margin-bottom:56px;}
+  }
+
+  @media (max-width:480px){
+    .wrap{padding:44px 20px 64px;}
+    header{padding-bottom:28px; margin-bottom:40px;}
+    .hero{margin-bottom:44px;}
+    .hero p{font-size:14.5px;}
+    .section-head h2{font-size:22px;}
+    .plan-card{padding:28px 22px;}
+    .plan-price{font-size:32px;}
+    .plan-wa{font-size:12.5px; padding:12px 14px;}
+    .cta-box{padding:28px 22px;}
+    .cta-box p.big{font-size:19px;}
+  }
