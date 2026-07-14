@@ -1,0 +1,84 @@
+{
+  "principioativo": {
+    "slug": "principioativo",
+    "nome": "Princípio Ativo",
+    "tagline": "Performance em Tráfego Pago",
+    "titulo": "Evoluindo a parceria com a Princípio Ativo",
+    "descricao": "Três formas de aprofundar a gestão da ACT Digital na sua operação — do tráfego pago que já entregamos até a gestão completa de automação e equipe.",
+    "whatsapp": "5562996762879",
+    "planos": [
+      {
+        "numero": "01",
+        "nome": "Plano Start",
+        "descricao": "O nosso arroz com feijão: estratégia e gestão de campanhas.",
+        "valor": 1250,
+        "destaque": false,
+        "inclusos": [
+          "Estratégia e gestão de campanhas Meta Ads",
+          "Estrategista digital dedicado à conta",
+          "Testes de criativos, públicos e ofertas",
+          "Otimização contínua baseada em dados",
+          "Relatório semanal de performance"
+        ]
+      },
+      {
+        "numero": "02",
+        "nome": "Plano Advanced",
+        "descricao": "Tudo do Plano 01, com o atendimento do Instagram automatizado.",
+        "valor": 1500,
+        "destaque": true,
+        "pré": "Inclui tudo do Plano 01, mais:",
+        "inclusos": [
+          "Gestão de automação via ManyChat",
+          "Fluxos automatizados de qualificação e resposta no Instagram",
+          "Menos trabalho manual da equipe respondendo o Direct mensagem por mensagem"
+        ]
+      },
+      {
+        "numero": "03",
+        "nome": "Plano Expert",
+        "descricao": "Tudo do Plano 02, com a operação sob nossa cobrança.",
+        "valor": 1750,
+        "destaque": false,
+        "pré": "Inclui tudo do Plano 02, mais:",
+        "inclusos": [
+          "Gestão de equipe e tarefas",
+          "Cobrança de prazos e entregas do seu time",
+          "Reporte direto e periódico pra você sobre o andamento de cada tarefa"
+        ]
+      }
+    ],
+    "decisoes": [
+      {
+        "numero": "01",
+        "nome": "Plano Start",
+        "problemas": [
+          "Falta de clientes novos entrando todo mês, sem depender só do orgânico ou do boca a boca",
+          "Ausência de estratégia e dados pra saber o que realmente está gerando venda",
+          "Falta de um especialista dedicado olhando pra conta com frequência",
+          "Campanhas soltas, sem teste de público, criativo ou oferta"
+        ]
+      },
+      {
+        "numero": "02",
+        "nome": "Plano Advanced",
+        "problemas": [
+          "Demora no atendimento do Direct — lead esfriando antes de alguém responder",
+          "Equipe sobrecarregada respondendo a mesma pergunta repetidas vezes no Direct",
+          "Falta de padronização no atendimento pelo Instagram",
+          "Vendas perdidas por não conseguir responder o Direct fora do horário comercial"
+        ]
+      },
+      {
+        "numero": "03",
+        "nome": "Plano Expert",
+        "problemas": [
+          "Falta de visibilidade sobre o que a equipe está de fato entregando",
+          "Prazos perdidos ou tarefas paradas sem ninguém cobrando",
+          "Peso operacional de gestão acumulado em cima de você",
+          "Ausência de um reporte estruturado sobre o andamento das atividades"
+        ]
+      }
+    ]
+  }
+}

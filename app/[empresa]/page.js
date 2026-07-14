@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { notFound } from 'next/navigation'
-import propostas from '@/propostas-data.json'
+import propostas from '@/lib/propostas-data.json'
 import './proposta.css'
 
 export default function PropostaPage({ params }) {
